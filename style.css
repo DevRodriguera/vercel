@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Phudu&family=Ubuntu:ital,wght@1,500&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Phudu', cursive;
+    background:  url(img/header-wallpaper3.png) no-repeat, linear-gradient(0deg, rgba(255, 255, 255, .0), rgba(0, 0, 0, .99) 80%);
+    background-size: 15vw;
+    background-position: center;
+    color: white;
+    height: 25vw;
+    width: 100% auto;
+}
+
+header::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Phudu', cursive;
+    background: url(img/header-wallpaper3.png) no-repeat;
+    background-size: 15vw;
+    background-position: center;
+    color: white;
+    height: 25vw;   
+    width: 100% auto;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+header > * {
+    font-family: 'Phudu', cursive;
+}
+
+#hh-content {
+    font-family: 'Ubuntu';
+}
+
+.rt-content {
+    font-family: 'Ubuntu';
+}
+
+.header-time{
+    position: initial;
+    font-size: 30px;
+    font-weight: 800;
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 60vw;
+    }
+}
