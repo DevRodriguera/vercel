@@ -19,5 +19,5 @@
         const now = new Date();
         const hour = zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
 
-        document.getElementById('real-time').innerHTML = '<span class="rt-content">'+hour+'</span>';
+        document.getElementById('real-time').innerHTML = '<span id="rt-content">'+hour+'</span>';
 }, 1000);
