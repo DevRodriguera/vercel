@@ -1,39 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Phudu&family=Ubuntu:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Phudu&family=Sora:wght@800&family=Ubuntu:ital,wght@1,500&display=swap');
+
 
 
 * {
     padding: 0px;
     margin: 0px;
-    font-family: none;
+    font-style: none;
 }
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Phudu', cursive;
     color: white;
     height: 25vw;
-    width: 100% auto;
+    width: 100%;
+    font-family: 'Sora';
+}
+
+.container {
+    height: auto;
+    width: auto;
+    border: black solid;
+    display: flex;
+    flex-direction: column;
 }
 
 header::before {
     content: "";
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
-    z-index: -2;
-    background: linear-gradient(0deg, rgba(255, 255, 255, .0) 20%, rgba(0, 0, 0, .99) 80%);
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(24, 0, 63, 0.99));
     background-size: 25vw;
     height: 25vw;
 }
 
 header::after {
     content: "";
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: -2;
     background: url(img/header-wallpaper3.png) no-repeat;
     background-size: 25vw;
     background-position: center;
@@ -45,54 +54,75 @@ header::after {
     filter: blur(5px);
 }
 
-header > * {
-    font-family: 'Phudu', cursive;
-    font-size: 20px;
-}
-
 #hh-content {
-    font-family: 'Ubuntu';
+    color: #36008C;
+    font-family: 'Sora';
 }
 
 #rt-content {
-    font-family: 'Ubuntu';
+    color: #36008C;
+    font-family: 'Sora';
 }
 
 .header-time{
-    position: initial;
+    display: flex;
     font-size: 30px;
     font-weight: 800;
-    display: flex;
     gap: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    header {
-        font-family: 'Phudu', cursive;
-        color: white;
-        height: 25vw;
-        width: 100% auto;
+#destaque {
+    background-color: #18003ffc;
+}
+
+main {
+    display: flex;
+}
+
+@media only screen and (min-width: 1025px) {
+    header > * {
+        margin-left: 5vw;
+    }
+
+    header > h1{
+        font-size: 5rem;
     }
     
+    header > h2{
+        font-size: 3rem;
+    }
+    
+    header > h3{
+    font-size: 3rem;
+    }
+
+    .header-time{
+        padding-left: 1vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: 100vw;
+        text-align: left;
+    }
+
     header::before {
-        content: "";
-        position: fixed;
-        left: 0;
-        right: 0;
-        z-index: -2;
-        background: linear-gradient(0deg, rgba(255, 255, 255, .0) 20%, rgba(0, 0, 0, .99) 80%);
-        background-size: 25vw;
-        height: 25vw;
+        background-size: 100vw;
+        height: 100vw;
     }
     
     header::after {
-        background-size: 30vw;
-        background-position: center;
-        height: 25vw;
-        -webkit-filter: blur(5px);
-        -moz-filter: blur(5px);
-        -o-filter: blur(5px);
-        -ms-filter: blur(5px);
-        filter: blur(5px);
+        background-size: 80vw;
+        height: 80vw;
+        -webkit-filter: blur(14px);
+        -moz-filter: blur(14px);
+        -o-filter: blur(14px);
+        -ms-filter: blur(14px);
+        filter: blur(14px);
+    }
+
+    .header-time{
+        justify-content: center;
     }
 }

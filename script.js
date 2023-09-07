@@ -4,11 +4,11 @@
     let showHello = document.querySelector("#header-hello");
 
     if(now.getHours() < 12) {
-        showHello.textContent = '<p id="hh-content">Bom dia</p>';
+        showHello.innerHTML = '<p id="hh-content">Bom dia -</p>';
     }else if(now.getHours() < 18) {   
         showHello.innerHTML = '<p id="hh-content">Boa tarde -</p>';
     }else {
-        showHello.innerHTML = '<p id="hh-content">Boa noite</p>';
+        showHello.innerHTML = '<p id="hh-content">Boa noite -</p>';
     }
 
     const zeroFill = n => {
