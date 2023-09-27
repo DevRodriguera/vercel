@@ -9,45 +9,22 @@
     font-family: 'Sora';
 }
 
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100vw;
+}
+
 header {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: center;
     color: white;
     height: 400px;
-    width: 100vw;
     background: rgb(34,193,195);
     background: linear-gradient(20deg, rgba(34,193,195,1) 0%, rgb(57, 15, 211) 100%);
-    box-shadow: 0px 8px 20px rgb(57, 15, 211);
+    box-shadow: 0px 8px 20px #555;
 }
-
-/* header::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(24, 0, 63, 0.99));
-    background-size: 25vw;
-    height: 25vw;
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -2;
-    background: url(img/header-wallpaper3.png) no-repeat;
-    background-size: 25vw;
-    background-position: center;
-    height: 25vw;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-} */
 
 .header-time{
     display: flex;
@@ -77,20 +54,50 @@ main {
     width: 90vw;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+    gap: 40px 15px;
 }
 
-.projects img {
-    box-shadow: 2px 5px 10px #4c199efc;
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-img {
+    box-shadow: 2px 5px 10px #444;
     width: 530px;
     border-radius: 5px;
+    display: block;
 }
 
-.projects img:hover {
-    cursor: pointer;
-    
+.project:hover {
+    transition: 1s;
+    filter: blur(1px);
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    width: 530px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    column-gap: 40px;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.bi {
+    font-size: 90px;
+}
+
+.project:hover .bi::after{
+
 }
 
 @media only screen and (min-width: 1025px) {
@@ -111,32 +118,14 @@ main {
     }
 
     .header-time{
-        padding-left: 1vw;
+        padding-left: 2vw;
     }
 }
 
-@media only screen and (max-width: 480px) {
-    header {
-        height: 100vw;
-        text-align: left;
-    }
+@media only screen and (max-width:768px) {
 
-    header::before {
-        background-size: 100vw;
-        height: 100vw;
-    }
-    
-    header::after {
-        background-size: 80vw;
-        height: 80vw;
-        -webkit-filter: blur(14px);
-        -moz-filter: blur(14px);
-        -o-filter: blur(14px);
-        -ms-filter: blur(14px);
-        filter: blur(14px);
-    }
+.project-img {
+    width: 340px;
+}
 
-    .header-time{
-        justify-content: center;
-    }
 }
