@@ -1,0 +1,60 @@
+footer {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+footer > h3 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 700px;
+}
+
+.footer-icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  gap: 4rem;
+}
+
+.footer-icons .bi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-ligth);
+  color: var(--primary-text);
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.footer-icons a:link {
+  color: black;
+}
+
+.footer-icons a:visited {
+  color: black;
+}
+
+.footer-icons a:hover {
+  color: black;
+}
+
+.footer-bar {
+  /* width: 100vw; */
+  height: 80px;
+  background-color: var(--background-ligth);
+  color: var(--primary-text);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: (var(emphasis));
+}
