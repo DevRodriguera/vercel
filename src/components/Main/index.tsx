@@ -30,13 +30,20 @@ const MainContent = () => {
     }
   ]
 
-  const staksAtt = [
-    { id: 1, link: "https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5", height:80 },
-    { id: 2, link: "https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3", height:75 },
+  const currentStacks = [
+    { id: 1, link: "https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5", height:90 },
+    { id: 2, link: "https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3", height:80 },
     { id: 3, link: "https://img.shields.io/badge/JS-black?style=for-the-badge&logo=javascript", height:60 },
     { id: 4, link: "https://img.shields.io/badge/TS-black?style=for-the-badge&logo=typescript", height:60 },
-    { id: 5, link: "https://img.shields.io/badge/React-black?style=for-the-badge&logo=react", height:80 },
+    { id: 5, link: "https://img.shields.io/badge/React-black?style=for-the-badge&logo=react", height:90 },
     { id: 6, link: "https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github", height:100 }
+  ]
+  const currentTools = [
+    { id: 1, link: "https://img.shields.io/badge/INSOMNIA-grey?style=for-the-badge&logo=insomnia", height:120 },
+    { id: 2, link: "https://img.shields.io/badge/FIGMA-grey?style=for-the-badge&logo=figma", height:90 },
+    { id: 3, link: "https://img.shields.io/badge/NOTION-grey?style=for-the-badge&logo=notion", height:100 },
+    { id: 4, link: "https://img.shields.io/badge/VSCODE-grey?style=for-the-badge&logo=visualstudiocode", height:100 },
+    { id: 5, link: "https://img.shields.io/badge/UBUNTU-grey?style=for-the-badge&logo=linux", height:100 },
   ]
 
   return (
@@ -49,7 +56,7 @@ const MainContent = () => {
         <div id='stacks'>
           <h3>Algumas das Stacks que uso atualemnte</h3>
           <div>
-            {staksAtt.map(data =>
+            {currentStacks.map(data =>
               <Image
                 key={data.id}
                 src={data.link}
@@ -59,9 +66,17 @@ const MainContent = () => {
               />
             )}
           </div>
-          <h3>Staks que pretendo ser PRO</h3>
+          <h3>Ferramentas que utilizo atualmente</h3>
           <div>
-
+            {currentTools.map(data =>
+              <Image
+                key={data.id}
+                src={data.link}
+                alt={''}
+                width={data.height}
+                height={30}
+              />
+            )}
           </div>
         </div>
         <Image alt='' src={eu} width={300} />

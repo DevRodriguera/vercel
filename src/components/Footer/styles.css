@@ -47,7 +47,7 @@ footer > h3 {
 }
 
 .footer-bar {
-  /* width: 100vw; */
+  width: 100vw;
   height: 80px;
   background-color: var(--background-ligth);
   color: var(--primary-text);

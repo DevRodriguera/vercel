@@ -28,7 +28,8 @@ main {
 }
 
 #stacks h3 {
-  color: var();
+  color: var(--primary-text);
+  font-weight: 600;
 }
 
 #stacks > div {
@@ -69,7 +70,7 @@ main {
 
 main > h1 {
   /* color: #FC7307; */
-  width: 100vw auto;
+  width: 100vw;
   height: 70px;
   display: flex;
   align-items: center;
