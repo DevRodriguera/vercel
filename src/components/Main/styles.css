@@ -12,7 +12,7 @@ main {
   grid-template-areas:
     'about image'
     'stacks image';
-  width: 100vw auto;
+  width: 100vw;
   height: 100vh;
   background-color: var(--background-ligth);
   justify-items: center;

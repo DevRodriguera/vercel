@@ -1,15 +1,16 @@
 import React from 'react'
 import Card from '../Card'
 import './styles.css'
+import Image from 'next/image'
 
 const MainContent = () => {
   const staksAtt = [
-    { link: "https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5" },
-    { link: "https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3" },
-    { link: "https://img.shields.io/badge/JS-black?style=for-the-badge&logo=javascript" },
-    { link: "https://img.shields.io/badge/TS-black?style=for-the-badge&logo=typescript" },
-    { link: "https://img.shields.io/badge/React-black?style=for-the-badge&logo=react" },
-    { link: "https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github" }
+    { id:1,link: "https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5" },
+    { id:2,link: "https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3" },
+    { id:3,link: "https://img.shields.io/badge/JS-black?style=for-the-badge&logo=javascript" },
+    { id:4,link: "https://img.shields.io/badge/TS-black?style=for-the-badge&logo=typescript" },
+    { id:5,link: "https://img.shields.io/badge/React-black?style=for-the-badge&logo=react" },
+    { id:6,link: "https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github" }
   ]
   return (
     <main>
@@ -22,7 +23,13 @@ const MainContent = () => {
           <h3>Algumas das Stacks que uso atualemnte</h3>
           <div>
             {staksAtt.map(data =>
-              <img src={data.link} />
+              <Image
+                key={data.id}
+                src={data.link}
+                alt={''}
+                width={80}
+                height={40}
+              />
             )}
           </div>
           <h3>Staks que pretendo ser PRO</h3>
