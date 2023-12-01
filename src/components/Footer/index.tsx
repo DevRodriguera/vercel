@@ -8,7 +8,7 @@ const Footer = () => {
     { link: "mailto:souzarodrigo7@hotmail.com", icon: "bi bi-envelope-fill" },
     { link: "tel:+5515981555714", icon: "bi bi-whatsapp" },
     { link: "http://github.com/DevRodriguera", icon: "bi bi-github" },
-    { link: "http://linkedin.com/in/rodriguera", icon: "bi bi-linkedin" },
+    { link: "https://www.linkedin.com/in/rodrigosfc/", icon: "bi bi-linkedin" },
   ]
 
   return (

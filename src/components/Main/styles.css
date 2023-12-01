@@ -7,68 +7,61 @@ main {
   padding-bottom: 80px;
 }
 
+* {}
+
 .wellcome {
-  display: grid;
-  grid-template-areas:
-    'about image'
-    'stacks image';
-  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   height: 100vh;
   background-color: var(--background-ligth);
-  justify-items: center;
+}
+
+.wellcome > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
 }
 
-#about {
-  grid-area: about;
+#about h1 {
+  color: var(--primary-text);
+  font-weight: 800;
+}
+
+#about h3 {
+  color: white;
+  padding-top: 10px;
+  width: 700px;
+  font-weight: 500;
 }
 
 #stacks {
-  grid-area: stacks;
-}
-
-#stacks h3 {
-  color: var(--primary-text);
-  font-weight: 600;
-}
-
-#stacks > div {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#photome {
-  grid-area: image;
-}
-
-.wellcome div {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 50vw;
-  row-gap: 20px;
+  gap: 20px;
 }
 
-.wellcome img {
+#stacks h3 {
+  color: var(--primary-text);
+  font-weight: 700;
+}
+
+#stacks div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
   border-radius: 10%;
 }
 
-.wellcome h2 {
-  color: var(--primary-text);
-  font-weight: 800;
-  font-size: 1.7rem;
-}
-
-.wellcome h3 {
-  color: var(--default-text-ligth);
-  font-weight: 500;
-}
-
-main > h1 {
+main>h1 {
   /* color: #FC7307; */
   width: 100vw;
   height: 70px;
