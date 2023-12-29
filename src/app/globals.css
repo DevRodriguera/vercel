@@ -1,32 +1,27 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Phudu&family=Sora:wght@800&family=Ubuntu:ital,wght@1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-style: none;
-  text-decoration: none;
-}
-
-html,
-body {
-  max-width: 100vw;
-  background-color: var(--background-default);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --primary-text:#FBAA09;
-  --secondary-text:#;
-  --default-text-ligth:#EEE;
-  --emphasis-purple:#9C0797;
-  --background-dark:#0A3409;
-  --background-ligth:#549D53;
-  --background-default:rgb(233, 233, 233);
+  /* --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0; */
+  }
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
 }

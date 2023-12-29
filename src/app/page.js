@@ -1,10 +1,6 @@
-import React from 'react'
-import Card from '../Card'
-import './styles.css'
 import Image from 'next/image'
-import eu from '../../../public/img/eu.jpg'
 
-const MainContent = () => {
+export default function Home() {
 
   const cards = [
     {
@@ -46,61 +42,22 @@ const MainContent = () => {
     { id: 5, link: "https://img.shields.io/badge/UBUNTU-grey?style=for-the-badge&logo=linux", height: 100 },
   ]
 
+  
+
   return (
-    <main>
-      <div className="wellcome">
-        <div>
-          <div id='about'>
-            <h1>Olá, seja bem vindo ao meu porifólio digital !</h1>
-            <h3>Me chamo <span>Rodrigo</span> e sou desenvolvedor <span>front end</span>. <br/>
-            Aqui vou estar compartilhando toda minha experiência e idéias. Aqui você encontrará uma coleção dos projetos nos quais trabalhei, testando meus conhecimentos com soluções criativas e inovadoras.</h3>
-          </div>
-            <Image alt='' src={eu} width={350} />
-        </div>
-        <div id='stacks'>
-          <h3>Algumas das Stacks que uso atualemnte</h3>
-          <div>
-            {currentStacks.map(data =>
-              <Image
-                key={data.id}
-                src={data.link}
-                alt={''}
-                width={data.height}
-                height={30}
-              />
-            )}
-          </div>
-          <h3>Ferramentas que utilizo atualmente</h3>
-          <div>
-            {currentTools.map(data =>
-              <Image
-                key={data.id}
-                src={data.link}
-                alt={''}
-                width={data.height}
-                height={30}
-              />
-            )}
-          </div>
-        </div>
-      </div>
+    <>
+      <header className='flex items-center flex-nowrap flex-col h-screen '>
+        <nav className='w-screen bg-blue-600'>  
+          
+        </nav>
+        <h1 className='text-7xl p-10'>Olá, seja bem vindo !</h1>
+      </header>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
-      <h1>Alguns de meus projetos</h1>
-      <div className="cards">
-        {
-          cards.map(data => (
-            <Card
-              key={data.id}
-              img={data.image}
-              github={data.github}
-              vercel={data.vercel}
-            />
-          ))
-        }
+      </main>
+      <footer>
 
-      </div>
-    </main>
+      </footer>
+    </>
   )
 }
-
-export default MainContent
