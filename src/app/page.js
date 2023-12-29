@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Icon from './components/icon'
 
 export default function Home() {
 
@@ -42,17 +43,22 @@ export default function Home() {
     { id: 5, link: "https://img.shields.io/badge/UBUNTU-grey?style=for-the-badge&logo=linux", height: 100 },
   ]
 
-  
-
   return (
     <>
-      <header className='flex items-center flex-nowrap flex-col h-screen '>
-        <nav className='w-screen bg-blue-600'>  
-          
-        </nav>
-        <h1 className='text-7xl p-10'>Olá, seja bem vindo !</h1>
+      <header className='flex flex-col flex-nowrap items-center h-screen bg-emerald-500'>
+        <h1 className='text-7xl p-16 text-white'>Olá, seja bem vindo !</h1>
+        <div className=''>
+
+          <div className='flex'>
+
+            {currentStacks.map(data => (
+              <Icon link={data.link} icon={data.height} />
+            ))}
+          </div>
+        </div>
+
       </header>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex flex-col flex-nowrap items-center min-h-screen justify-between p-24">
 
       </main>
       <footer>
