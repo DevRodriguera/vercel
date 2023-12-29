@@ -49,10 +49,10 @@ export default function Home() {
         <h1 className='text-7xl p-16 text-white'>Olá, seja bem vindo !</h1>
         <div className=''>
 
-          <div className='flex'>
+          <div className='flex flex-wrap gap-x-4 gap-y-6 px-5'>
 
             {currentStacks.map(data => (
-              <Icon link={data.link} icon={data.height} />
+              <Icon key={data.id} link={data.link} icon={data.height} />
             ))}
           </div>
         </div>
