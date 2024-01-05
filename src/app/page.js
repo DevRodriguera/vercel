@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Icon from './components/icon'
+import eu from '/public/assets/self_5.jpg'
 
 export default function Home() {
 
@@ -45,21 +46,21 @@ export default function Home() {
 
   return (
     <>
-      <header className='flex flex-col flex-nowrap items-center h-screen bg-emerald-500'>
-        <h1 className='text-7xl p-16 text-white'>Olá, seja bem vindo !</h1>
-        <div className=''>
-
-          <div className='flex flex-wrap gap-x-4 gap-y-6 px-5'>
-
-            {currentStacks.map(data => (
-              <Icon key={data.id} link={data.link} icon={data.height} />
-            ))}
-          </div>
-        </div>
-
+    <button className='absolute' onClick={''}>X</button>
+      <header className='header flex justify-center items-center h-screen'>
+        <h1 className='text-7xl p-16'>Olá, seja bem vindo !</h1>
       </header>
       <main className="flex flex-col flex-nowrap items-center min-h-screen justify-between p-24">
-
+          <div>
+            <Image src={eu} width={300} loading="lazy" className='self'/>
+          </div>
+        <h2 className='text-4xl'></h2>
+        <img src='' />
+        <div className='flex flex-wrap gap-x-4 gap-y-6 px-5'>
+          {currentStacks.map(data => (
+            <Icon key={data.id} link={data.link} icon={data.height} />
+          ))}
+        </div>
       </main>
       <footer>
 
