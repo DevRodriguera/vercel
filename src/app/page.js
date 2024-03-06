@@ -52,7 +52,7 @@ export default function Home() {
       </header>
       <main className='flex flex-col flex-nowrap items-center min-h-screen justify-between p-24'>
         <div className='flex flex-row content-between'>
-          <Image src={eu} width={288} loading="lazy" className='self absolute' />
+          <Image alt='Foto minha' src={eu} width={288} loading="lazy" className='self absolute' />
           <div className='bg-black text-white flex justify-center p-24 rounded-l-full'>
             <h2 className='text-5xl text-center'>Me chamo Rodrigo e atualmente trabalho com suporte de sistemas</h2>
           </div>
