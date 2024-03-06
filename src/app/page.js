@@ -46,14 +46,18 @@ export default function Home() {
 
   return (
     <>
-    <button className='absolute' onClick={''}>X</button>
+      {/* <button className='absolute' onClick={''}>X</button> */}
       <header className='header flex justify-center items-center h-screen'>
         <h1 className='text-7xl p-16'>Olá, seja bem vindo !</h1>
       </header>
-      <main className="flex flex-col flex-nowrap items-center min-h-screen justify-between p-24">
-          <div>
-            <Image src={eu} width={300} loading="lazy" className='self'/>
+      <main className='flex flex-col flex-nowrap items-center min-h-screen justify-between p-24'>
+        <div className='flex flex-row content-between'>
+          <Image src={eu} width={288} loading="lazy" className='self absolute' />
+          <div className='bg-black text-white flex justify-center p-24 rounded-l-full'>
+            <h2 className='text-5xl text-center'>Me chamo Rodrigo e atualmente trabalho com suporte de sistemas</h2>
           </div>
+        </div>
+
         <h2 className='text-4xl'></h2>
         <img src='' />
         <div className='flex flex-wrap gap-x-4 gap-y-6 px-5'>

@@ -38,5 +38,9 @@ body {
 }
 
 .self {
-  border-radius: 5000px;
+  border-radius: 50%;
+}
+
+.abc {
+  border: 1px solid;
 }
